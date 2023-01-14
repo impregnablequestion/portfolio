@@ -26,7 +26,7 @@ const NavBar = () => {
         <nav>
             <Bar>
                 <Title>séamus ryan: coding portfolio</Title>
-                <NavLink to="/">home</NavLink>
+                <NavLink to="/portfolio">home</NavLink>
                 <NavLink to="/about">about</NavLink>
                 <NavLink to="/projects">projects</NavLink>
                 <NavLink to="/github-repos">repos</NavLink>
