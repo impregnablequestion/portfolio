@@ -1,13 +1,15 @@
-import { Link } from "react-router-dom"
-import styled from "styled-components"
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const NavLink = styled(Link)`
     color: white;
+    font-family: "Josefin Sans";
     padding: 1rem;
     text-decoration: none;
 
-    &hover {
-        text-decoration: underline;
+    &:hover {
+        color:hotpink;
     }
     `
 
@@ -22,13 +24,27 @@ const Title = styled.h1`
 `
 const NavBar = () => {
 
+    const [dropdownOpen, setDropdownOpen] = useState(false)
+
+    const handleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    }
+
+
     return(
-        <nav>
+        <nav id="navbar">
             <Bar>
                 <Title>séamus ryan: coding portfolio</Title>
                 <NavLink to="/">home</NavLink>
                 <NavLink to="/about">about</NavLink>
-                <NavLink to="/projects">projects</NavLink>
+                <NavLink onClick={handleDropdown}>projects</NavLink>
+                {dropdownOpen ? 
+                <ul id="dropdown-projects">
+                    <NavLink to="/projects">python/flask/sql</NavLink>
+                    <NavLink to="/projects">react/js</NavLink>
+                    <NavLink to="/projects">java</NavLink>
+                </ul>
+                :null}
                 <NavLink to="/github-repos">repos</NavLink>
             </Bar>
         </nav>

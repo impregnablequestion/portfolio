@@ -7,15 +7,14 @@ import Error from './Error';
 
 function App() {
 
-
-
   return (
     <div className='.App'>
       <Router>
       <Background/>
       <NavBar/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route exact path='/' element={<Home/>}/>
+        <Route path='/portfolio' element={<Home/>}/>
         <Route path='/about' element={<Home/>}/>
         <Route path='/projects' element={<Home/>}/>
         <Route path='/github-repos' element={<Home/>}/>
