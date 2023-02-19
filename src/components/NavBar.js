@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -19,33 +18,22 @@ const Bar = styled.ul`
     align-items: center;
 `
 
-const Title = styled.h1`
-    color: hotpink;
+const HeadLink = styled(NavLink)`
+    font-size: x-large;
+    color:hotpink;
+    text-align: center;
 `
 const NavBar = () => {
 
-    const [dropdownOpen, setDropdownOpen] = useState(false)
-
-    const handleDropdown = () => {
-        setDropdownOpen(!dropdownOpen);
-    }
-
-
     return(
         <nav id="navbar">
+                {/* <Title to="/">séamus ryan: coding portfolio</Title> */}
+            <HeadLink to="/about">séamus ryan - coding portfolio</HeadLink>
             <Bar>
-                <Title>séamus ryan: coding portfolio</Title>
-                <NavLink to="/">home</NavLink>
                 <NavLink to="/about">about</NavLink>
-                <NavLink onClick={handleDropdown}>projects</NavLink>
-                {dropdownOpen ? 
-                <ul id="dropdown-projects">
-                    <NavLink to="/projects">python/flask/sql</NavLink>
-                    <NavLink to="/projects">react/js</NavLink>
-                    <NavLink to="/projects">java</NavLink>
-                </ul>
-                :null}
-                <NavLink to="/github-repos">repos</NavLink>
+                <NavLink to="/bell-jar-rota-project">python/flask/sql</NavLink>
+                <NavLink to="/projects">react/node/mongodb</NavLink>
+                {/* <NavLink to="/projects">java</NavLink> */}
             </Bar>
         </nav>
     )

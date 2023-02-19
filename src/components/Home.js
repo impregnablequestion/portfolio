@@ -1,6 +1,8 @@
 const Home = () => {
     return(
-        <h2>under construction...</h2>
+        <div className="footer">
+            <p>animation made with <a href="https://p5js.org">p5.js</a></p>
+        </div>
     )
 }
 

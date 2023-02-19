@@ -3,16 +3,44 @@
   font-family: "Josefin Sans";
 }
 
-.sketch {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
 h1 {
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
 }
 
+a {
+  text-decoration: underline;
+  color: white;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: small;
+}
+
+#navbar {
+  background-color: 0, 0, 0, 0.3;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.vimeo {
+  padding:75% 0 0 0;
+  position:relative;
+  margin: 5rem;
+}
+
+.iframe {
+  position:absolute;
+  top:0;
+  left:0;
+  width:50%;
+  height:50%;
+}
 
