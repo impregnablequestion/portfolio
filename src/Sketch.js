@@ -11,8 +11,9 @@ const P5 = styled(Sketch)`
 const Background = () => {
     
     let drops = []
+    
     let count = 0;
-    const frequency = 10;
+    const frequency = 40;
     const simultaneity = 300;
 
     const windowResized = (p5) => {
@@ -22,11 +23,13 @@ const Background = () => {
     const setup = (p5, canvasParentRef) => {
         p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
         p5.frameRate(30);
-        p5.background(0);
         p5.noFill();
+        p5.background(0);
     }
 
     const draw = (p5) => {
+        
+        p5.background(0);
 
         if (p5.frameCount % frequency === 0) {
             drops.push(new drop(p5, p5.random(p5.width), p5.random(p5.height)));
@@ -38,6 +41,18 @@ const Background = () => {
             drop.update();
             drop.display();
         }
+
+        // trying to get inner circles to display
+        // const dropsecho = drops.map(drop => {
+        //     drop.size -= 10;
+        //     drop.count -= 10;
+        //     drop.stroke -= 10;
+        //     return drop;
+        // });
+
+        // for (let drop of dropsecho) {
+        //     drop.display();
+        // }
 
     }
 
@@ -55,12 +70,12 @@ const Background = () => {
         this.count = 0;
 
         this.update = () => {
-            this.size += 1;
-            this.stroke -= 1;
+            this.size += 0.5;
+            this.stroke -= 0.25;
             this.count ++;
         }
 
-        this.display = () => {
+        this.display = async () => {
             p5.strokeWeight(2);
             p5.stroke(this.stroke);
             if (this.count <= 500) {

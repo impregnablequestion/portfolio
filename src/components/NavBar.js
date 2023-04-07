@@ -22,6 +22,7 @@ const HeadLink = styled(NavLink)`
     font-size: x-large;
     color:hotpink;
     text-align: center;
+    padding-top: 4rem;
 `
 const NavBar = () => {
 
@@ -31,9 +32,9 @@ const NavBar = () => {
             <HeadLink to="/about">séamus ryan - coding portfolio</HeadLink>
             <Bar>
                 <NavLink to="/about">about</NavLink>
-                <NavLink to="/bell-jar-rota-project">python/flask/sql</NavLink>
-                <NavLink to="/projects">react/node/mongodb</NavLink>
-                {/* <NavLink to="/projects">java</NavLink> */}
+                <NavLink to="/bell-jar-rota-project">bell jar rota</NavLink>
+                <NavLink to="/power-pong-league-project">power pong league</NavLink>
+                <NavLink to="/synthed-project">synthed</NavLink>
             </Bar>
         </nav>
     )

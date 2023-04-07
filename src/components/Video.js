@@ -1,6 +1,6 @@
 import ReactPlayer from "react-player/vimeo";
 
-const Video = ({video}) => {
+const Video = (video) => {
 
     return (
         <div>
