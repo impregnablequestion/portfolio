@@ -44,3 +44,7 @@ a {
   height:50%;
 }
 
+.active {
+  color: hotpink;
+}
+

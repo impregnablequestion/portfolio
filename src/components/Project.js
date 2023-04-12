@@ -16,6 +16,7 @@ const Project = ({video, Text}) => {
 const ProjectContainer = styled.div`
     display: flex;
     justify-content: center;
+    gap: 1rem;
     align-items: center;
     flex-wrap: wrap;
     padding: 5rem;
@@ -24,9 +25,12 @@ const ProjectContainer = styled.div`
 
 const TextContainer = styled.div`
     color: white;
-    max-width: 20rem;
-    background-color: black;
-    border-radius: 1rem;;
+    font-size: 16px;
+    max-width: 28rem;
+    background: rgba(0, 0, 0, 0.75);
+    /* border-radius: 1rem; */
+    padding: 0.5rem;
+    /* border: 0.1px solid white; */
 `
 
 export default Project;

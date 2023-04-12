@@ -13,7 +13,7 @@ const Background = () => {
     let drops = []
     
     let count = 0;
-    const frequency = 40;
+    const frequency = 100;
     const simultaneity = 300;
 
     const windowResized = (p5) => {

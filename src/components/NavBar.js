@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const NavLink = styled(Link)`
-    color: white;
-    font-family: "Josefin Sans";
+const Link = styled(NavLink)`
+    /* color: white; */
+    font-family: "Red Hat Mono";
     padding: 1rem;
     text-decoration: none;
 
@@ -16,10 +16,13 @@ const Bar = styled.ul`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.4);
 `
 
-const HeadLink = styled(NavLink)`
+const HeadLink = styled(Link)`
     font-size: x-large;
+    font-weight: bolder;
     color:hotpink;
     text-align: center;
     padding-top: 4rem;
@@ -29,12 +32,12 @@ const NavBar = () => {
     return(
         <nav id="navbar">
                 {/* <Title to="/">séamus ryan: coding portfolio</Title> */}
-            <HeadLink to="/about">séamus ryan - coding portfolio</HeadLink>
+            <HeadLink to="/">séamus ryan - coding portfolio</HeadLink>
             <Bar>
-                <NavLink to="/about">about</NavLink>
-                <NavLink to="/bell-jar-rota-project">bell jar rota</NavLink>
-                <NavLink to="/power-pong-league-project">power pong league</NavLink>
-                <NavLink to="/synthed-project">synthed</NavLink>
+                <Link to="/about">about</Link>
+                <Link to="/bell-jar-rota-project">bell jar rota</Link>
+                <Link to="/power-pong-league-project">power pong league</Link>
+                <Link to="/synthed-project">synthed</Link>
             </Bar>
         </nav>
     )

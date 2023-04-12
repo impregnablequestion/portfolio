@@ -8,6 +8,8 @@ import BellJarText from './components/ProjectText/BellJarText';
 import Project from './components/Project';
 import PPLText from './components/ProjectText/PPLText';
 import SynthedText from './components/ProjectText/SynthedText';
+import About from './components/About';
+import AboutText from './components/ProjectText/AboutText';
 
 function App() {
 
@@ -19,7 +21,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route path='/portfolio' element={<Home />} />
-          <Route path='/about' element={<Home />} />
+          <Route path='/about' element={<About Text={AboutText}/>} />
           <Route path='/bell-jar-rota-project' element={
             <Project video="https://vimeo.com/800257110" Text={BellJarText} />
           } />
