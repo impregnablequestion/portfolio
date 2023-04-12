@@ -19,7 +19,8 @@ const ProjectContainer = styled.div`
     gap: 1rem;
     align-items: center;
     flex-wrap: wrap;
-    padding: 5rem;
+    padding: 1.5rem;
+    padding-top: 5rem;
     /* border: 1px solid white; */
 `
 

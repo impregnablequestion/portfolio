@@ -12,7 +12,8 @@ const About = ({Text}) => {
 const AboutContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 4rem;
+  padding: 1.5rem;
+  padding-top: 5rem;
   font-size: 16px;
 `
 

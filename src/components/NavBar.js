@@ -18,6 +18,10 @@ const Bar = styled.ul`
     align-items: center;
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.4);
+    @media (max-width: 650px) {
+        flex-direction: column;
+    }
+
 `
 
 const HeadLink = styled(Link)`
