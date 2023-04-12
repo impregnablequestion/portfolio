@@ -20,6 +20,10 @@ const Bar = styled.ul`
     background: rgba(0, 0, 0, 0.4);
     @media (max-width: 650px) {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
     }
 
 `

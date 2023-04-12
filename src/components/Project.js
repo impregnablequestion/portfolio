@@ -5,10 +5,10 @@ const Project = ({video, Text}) => {
 
     return(
         <ProjectContainer>
-            <ReactPlayer url={video} controls/>
             <TextContainer>
               <Text/>
             </TextContainer>
+            <ReactPlayer url={video} controls/>
         </ProjectContainer>
     )
 }
